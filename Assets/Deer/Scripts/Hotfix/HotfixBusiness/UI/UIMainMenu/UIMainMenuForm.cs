@@ -56,13 +56,13 @@ namespace HotfixBusiness.UI
 			// 	procedureBase.ChangeStateByType(procedureBase.ProcedureOwner, typeof(ProcedureCheckAssets));
 			// }
 			
-			GameEntry.AssetObject.LoadGameObjectByName(nameof(UITask_Cell), (bool result, object gameObject, int serialId) =>
-			{
-				GameObject go = (GameObject)gameObject;
-				go.SetActive(true);
-				go.transform.position = new Vector2(0, 0);
-				go.transform.SetParent(transform, false);
-			});
+			// GameEntry.AssetObject.LoadGameObjectByName(nameof(UITask_Cell), (bool result, object gameObject, int serialId) =>
+			// {
+			// 	GameObject go = (GameObject)gameObject;
+			// 	go.SetActive(true);
+			// 	go.transform.position = new Vector2(0, 0);
+			// 	go.transform.SetParent(transform, false);
+			// });
 		}
 
 		private void Btn_DeerGameEvent()

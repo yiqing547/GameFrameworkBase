@@ -2,17 +2,17 @@
 <UnityGameFramework>
   <ResourceBuilder>
     <Settings>
-      <InternalResourceVersion>5</InternalResourceVersion>
-      <Platforms>32</Platforms>
+      <InternalResourceVersion>1</InternalResourceVersion>
+      <Platforms>128</Platforms>
       <AssetBundleCompression>1</AssetBundleCompression>
       <CompressionHelperTypeName>UnityGameFramework.Runtime.DefaultCompressionHelper</CompressionHelperTypeName>
       <AdditionalCompressionSelected>False</AdditionalCompressionSelected>
       <ForceRebuildAssetBundleSelected>False</ForceRebuildAssetBundleSelected>
       <BuildEventHandlerTypeName>BuildEventHandler</BuildEventHandlerTypeName>
-      <OutputDirectory>/Users/yiqing/Documents/ResourceBuilder</OutputDirectory>
+      <OutputDirectory>/Users/yiqing/Desktop/未命名文件夹</OutputDirectory>
       <OutputPackageSelected>True</OutputPackageSelected>
-      <OutputFullSelected>False</OutputFullSelected>
-      <OutputPackedSelected>False</OutputPackedSelected>
+      <OutputFullSelected>True</OutputFullSelected>
+      <OutputPackedSelected>True</OutputPackedSelected>
     </Settings>
   </ResourceBuilder>
 </UnityGameFramework>

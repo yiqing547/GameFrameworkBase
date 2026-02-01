@@ -103,13 +103,3 @@ MonoBehaviour:
     packed: 0
     filterType: 2
     searchPatterns: '*.*'
-  - valid: 1
-    name: UITemplate
-    variant: 
-    fileSystem: 
-    groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/UITemplate
-    loadType: 0
-    packed: 0
-    filterType: 1
-    searchPatterns: '*.*'
