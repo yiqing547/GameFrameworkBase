@@ -15,9 +15,6 @@ using Main.Runtime;
 using Main.Runtime.Procedure;
 using UnityEngine;
 using UnityGameFramework.Runtime;
-using UnityEngine.Networking;
-using System;
-// using HotfixBusiness.UnityWebSocket;
 
 namespace HotfixBusiness.UI
 {
@@ -26,64 +23,53 @@ namespace HotfixBusiness.UI
 	/// </summary>
 	public partial class UIMainMenuForm : UIFixBaseForm
 	{
+		protected override void OnInit(object userData) {
+			 base.OnInit(userData);
+			 GetBindComponents(gameObject);
 
-		protected override void OnInit(object userData)
-		{
-			base.OnInit(userData);
-			GetBindComponents(gameObject);
-
-			/*--------------------Auto generate start button listener.Do not modify!--------------------*/
+/*--------------------Auto generate start button listener.Do not modify!--------------------*/
 			m_Btn_DeerExample.onClick.AddListener(Btn_DeerExampleEvent);
 			m_Btn_DeerGame.onClick.AddListener(Btn_DeerGameEvent);
-			/*--------------------Auto generate end button listener.Do not modify!----------------------*/
+/*--------------------Auto generate end button listener.Do not modify!----------------------*/
 		}
 
 		private void Btn_DeerExampleEvent()
 		{
-			// if (!DeerSettingsUtils.DeerGlobalSettings.m_UseDeerExample)
-			// {
-			// 	DialogParams dialogParams = new DialogParams();
-			// 	dialogParams.Mode = 1;
-			// 	dialogParams.Title = "提示";
-			// 	dialogParams.Message = "Deer例子已经被移除! [DeerTools/DeerExample/AddExample]可以添加Deer例子。";
-			// 	dialogParams.ConfirmText = "确定";
-			// 	GameEntry.UI.OpenDialog(dialogParams);
-			// 	return;
-			// }
-			// if (GameEntry.Procedure.CurrentProcedure is ProcedureBase procedureBase)
-			// {
-			// 	procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Constant.Procedure.ProcedureADeerExample);
-			// 	procedureBase.ChangeStateByType(procedureBase.ProcedureOwner, typeof(ProcedureCheckAssets));
-			// }
-			
-			// GameEntry.AssetObject.LoadGameObjectByName(nameof(UITask_Cell), (bool result, object gameObject, int serialId) =>
-			// {
-			// 	GameObject go = (GameObject)gameObject;
-			// 	go.SetActive(true);
-			// 	go.transform.position = new Vector2(0, 0);
-			// 	go.transform.SetParent(transform, false);
-			// });
+			if (!DeerSettingsUtils.DeerGlobalSettings.m_UseDeerExample)
+			{
+				DialogParams dialogParams = new DialogParams();
+				dialogParams.Mode = 1;
+				dialogParams.Title = "提示";
+				dialogParams.Message = "Deer例子已经被移除! [DeerTools/DeerExample/AddExample]可以添加Deer例子。";
+				dialogParams.ConfirmText = "确定";
+				GameEntry.UI.OpenDialog(dialogParams);
+				return;
+			}
+			if (GameEntry.Procedure.CurrentProcedure is ProcedureBase procedureBase)
+			{
+				procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Constant.Procedure.ProcedureADeerExample);
+				procedureBase.ChangeStateByType(procedureBase.ProcedureOwner,typeof(ProcedureCheckAssets));
+			}
 		}
 
 		private void Btn_DeerGameEvent()
 		{
-			// if (!DeerSettingsUtils.DeerGlobalSettings.m_UseDeerExample)
-			// {
-			// 	DialogParams dialogParams = new DialogParams();
-			// 	dialogParams.Mode = 1;
-			// 	dialogParams.Title = "提示";
-			// 	dialogParams.Message = "Deer游戏例子已经被移除! [DeerTools/DeerExample/AddExample]可以添加Deer游戏例子。";
-			// 	dialogParams.ConfirmText = "确定";
-			// 	GameEntry.UI.OpenDialog(dialogParams);
-			// 	return;
-			// }
-			// if (GameEntry.Procedure.CurrentProcedure is ProcedureBase procedureBase)
-			// {
-			// 	procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Constant.Procedure.ProcedureAGameExample);
-			// 	procedureBase.ChangeStateByType(procedureBase.ProcedureOwner, typeof(ProcedureCheckAssets));
-			// }
+			if (!DeerSettingsUtils.DeerGlobalSettings.m_UseDeerExample)
+			{
+				DialogParams dialogParams = new DialogParams();
+				dialogParams.Mode = 1;
+				dialogParams.Title = "提示";
+				dialogParams.Message = "Deer游戏例子已经被移除! [DeerTools/DeerExample/AddExample]可以添加Deer游戏例子。";
+				dialogParams.ConfirmText = "确定";
+				GameEntry.UI.OpenDialog(dialogParams);
+				return;
+			}
+			if (GameEntry.Procedure.CurrentProcedure is ProcedureBase procedureBase)
+			{
+				procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Constant.Procedure.ProcedureAGameExample);
+				procedureBase.ChangeStateByType(procedureBase.ProcedureOwner,typeof(ProcedureCheckAssets));
+			}
 		}
-
-		/*--------------------Auto generate footer.Do not add anything below the footer!------------*/
+/*--------------------Auto generate footer.Do not add anything below the footer!------------*/
 	}
 }

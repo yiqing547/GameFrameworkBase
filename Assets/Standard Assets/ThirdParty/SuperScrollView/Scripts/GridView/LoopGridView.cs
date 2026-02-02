@@ -845,6 +845,7 @@ namespace SuperScrollView
                 RecycleItemGroupTmp(group);
             }
             mItemGroupList.Clear();
+            mItemTotalCount = 0;
         }
 
         public void UpdateGridViewContent()

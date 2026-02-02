@@ -535,7 +535,6 @@ namespace UnityGameFramework.Runtime
                 {
                     if (m_AssetBundleRequest.asset != null)
                     {
-                        Debug.LogError($"加载完成{m_AssetName} time = {Time.time}");
                         LoadResourceAgentHelperLoadCompleteEventArgs loadResourceAgentHelperLoadCompleteEventArgs = LoadResourceAgentHelperLoadCompleteEventArgs.Create(m_AssetBundleRequest.asset);
                         m_LoadResourceAgentHelperLoadCompleteEventHandler(this, loadResourceAgentHelperLoadCompleteEventArgs);
                         ReferencePool.Release(loadResourceAgentHelperLoadCompleteEventArgs);

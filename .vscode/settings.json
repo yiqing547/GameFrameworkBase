@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "GameFrameworkBase.sln"
+    "dotnet.defaultSolution": "Deer_GameFramework_Wolong-2021.3.1f1New.sln"
 }

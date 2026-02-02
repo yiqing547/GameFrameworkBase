@@ -16,7 +16,6 @@ using GameFramework.WebRequest;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityGameFramework.Runtime;
-// using Utility = UnityEngine.Networking.Utility;
 
 /// <summary>
 /// Web请求
