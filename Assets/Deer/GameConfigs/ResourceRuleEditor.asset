@@ -73,7 +73,7 @@ MonoBehaviour:
     packed: 0
     filterType: 1
     searchPatterns: '*.*'
-  - valid: 1
+  - valid: 0
     name: BaseAssets/UI/UIPrefabs
     variant: 
     fileSystem: 

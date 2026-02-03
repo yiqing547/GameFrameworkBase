@@ -10,9 +10,7 @@
       <Resource Name="BaseAssets/UI/UIArt/UISprites/Common" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForms/UIDialog/UIDialogForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForms/UILoading/UILoadingForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UI/UIForms/UIMainMenu/UIMainMenuForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForms/UITips/UITipsForm" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UI/UIPrefabs" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UITemplate/ScrollView/HGridScrollView" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UITemplate/ScrollView/HListScrollView" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UITemplate/ScrollView/ScrollVItemPrefab" LoadType="0" Packed="False" ResourceGroups="BaseAssets" />
@@ -34,7 +32,6 @@
       <Asset Guid="7247e1fea0760b54caa253020097fcdf" ResourceName="BaseAssets/UITemplate/ScrollView/ScrollVItemPrefab" />
       <Asset Guid="a493fd7876190a04b972bf7b3f90d962" ResourceName="BaseAssets/UITemplate/ScrollView/HGridScrollView" />
       <Asset Guid="a5671ef5b26e98f48b513cadb9e87e2b" ResourceName="BaseAssets/UI/UIArt/UISprites/Common" />
-      <Asset Guid="b171dbc43fa6a5243aaaa39a77b13dd6" ResourceName="BaseAssets/UI/UIForms/UIMainMenu/UIMainMenuForm" />
       <Asset Guid="b5b6e5e5b63377b4e9b3556b6812194d" ResourceName="BaseAssets/UI/UIForms/UITips/UITipsForm" />
       <Asset Guid="be2db0afaf364114488351f7201458b1" ResourceName="BaseAssets/UI/UIArt/AtlasCollection/Common" />
       <Asset Guid="dbc1d4bc6018f1f4f928156f5e3ffe21" ResourceName="BaseAssets/GameConfigs" />
