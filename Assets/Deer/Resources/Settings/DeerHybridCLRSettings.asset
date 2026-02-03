@@ -24,7 +24,6 @@ MonoBehaviour:
   AOTMetaAssemblies:
   - Assembly-CSharp-firstpass.dll
   - Assembly-CSharp.dll
-  - AstarPathfindingProject.dll
   - BrunoMikoski.AnimationSequencer.dll
   - CatJson.dll
   - Cinemachine.dll
@@ -37,9 +36,6 @@ MonoBehaviour:
   - ICSharpCode.SharpZipLib.dll
   - Main.Runtime.dll
   - Mono.Security.dll
-  - Pathfinding.ClipperLib.dll
-  - Pathfinding.Ionic.Zip.Reduced.dll
-  - Pathfinding.Poly2Tri.dll
   - PlayerPrefsEditor.dll
   - QHierarchyNullable.dll
   - QHierarchyRuntime.dll
@@ -87,7 +83,6 @@ MonoBehaviour:
   - UnityEngine.SpriteMaskModule.dll
   - UnityEngine.SpriteShapeModule.dll
   - UnityEngine.SubsystemsModule.dll
-  - UnityEngine.TerrainModule.dll
   - UnityEngine.TextCoreFontEngineModule.dll
   - UnityEngine.TextCoreTextEngineModule.dll
   - UnityEngine.TextRenderingModule.dll
