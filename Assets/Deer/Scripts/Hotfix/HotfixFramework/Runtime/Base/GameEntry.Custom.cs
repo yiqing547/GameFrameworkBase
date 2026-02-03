@@ -192,7 +192,7 @@ public partial class GameEntry
         GameObject gameObject = UnityEngine.Object.Instantiate((GameObject)asset, GameObject.Find("DeerGF").transform, true);
         gameObject.name = "Customs";
         gameObject.transform.position = Vector3.zero;
-        ResetProcedure();
+        // ResetProcedure();
         ResetUIFormHelper();
         //关闭启动界面
         GameEntryMain.UI.DeerUIInitRootForm().OnCloseLaunchView();
