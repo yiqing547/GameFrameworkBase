@@ -123,3 +123,13 @@ MonoBehaviour:
     packed: 0
     filterType: 1
     searchPatterns: '*.*'
+  - valid: 0
+    name: BaseAssets/Scenes
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/Scenes
+    loadType: 0
+    packed: 0
+    filterType: 0
+    searchPatterns: '*.*'

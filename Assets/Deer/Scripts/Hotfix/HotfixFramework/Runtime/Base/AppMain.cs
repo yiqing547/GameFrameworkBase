@@ -18,8 +18,6 @@ public static class AppMain
 {
     public static void Entrance(object[] objects) 
     {
-        //卸载流程
-        GameEntry.Fsm.DestroyFsm<GameFramework.Procedure.IProcedureManager>();
         GameEntry.UI.DeerUIInitRootForm().OnOpenLoadingForm(true);
         GameEntry.Entrance(objects);
     }

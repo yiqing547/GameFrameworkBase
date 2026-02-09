@@ -43,10 +43,10 @@ public partial class GameEntry
 
     public static AssetObjectComponent AssetObject => _assetObject ??= UnityGameFramework.Runtime.GameEntry.GetComponent<AssetObjectComponent>();
     private static AssetObjectComponent _assetObject;
-    
+
     public static FileDownloadComponent FileDownload => _fileDownload ??= UnityGameFramework.Runtime.GameEntry.GetComponent<FileDownloadComponent>();
     private static FileDownloadComponent _fileDownload;
-    
+
     public static CrossPlatformComponent CrossPlatform => _crossPlatform ??= UnityGameFramework.Runtime.GameEntry.GetComponent<CrossPlatformComponent>();
     private static CrossPlatformComponent _crossPlatform;
     /// <summary>
@@ -99,7 +99,7 @@ public partial class GameEntry
     }
     public static ProcedureBase GetProcedureByName(string procedureName)
     {
-        if (GetHotfixAssemblys() == null ||  procedureName == null)
+        if (GetHotfixAssemblys() == null || procedureName == null)
         {
             return null;
         }
@@ -172,9 +172,9 @@ public partial class GameEntry
     /// <summary>
     /// 加载自定义组件
     /// </summary>
-    private static void LoadCustomComponent() 
+    private static void LoadCustomComponent()
     {
-        GameEntryMain.Resource.LoadAsset("Assets/Deer/AssetsHotfix/BaseAssets/GF/Customs.prefab", new LoadAssetCallbacks(LoadAssetSuccessCallback,LoadAssetFailureCallback));
+        GameEntryMain.Resource.LoadAsset("Assets/Deer/AssetsHotfix/BaseAssets/GF/Customs.prefab", new LoadAssetCallbacks(LoadAssetSuccessCallback, LoadAssetFailureCallback));
     }
 
     private static void LoadAssetFailureCallback(string assetName, LoadResourceStatus status, string errorMessage, object userData)
@@ -184,7 +184,7 @@ public partial class GameEntry
 
     private static void LoadAssetSuccessCallback(string assetName, object asset, float duration, object userData)
     {
-        if (GameObject.Find("DeerGF/Customs")!= null)
+        if (GameObject.Find("DeerGF/Customs") != null)
         {
             Resource.UnloadAsset(asset);
             return;
@@ -192,49 +192,50 @@ public partial class GameEntry
         GameObject gameObject = UnityEngine.Object.Instantiate((GameObject)asset, GameObject.Find("DeerGF").transform, true);
         gameObject.name = "Customs";
         gameObject.transform.position = Vector3.zero;
-        // ResetProcedure();
+        ResetProcedure();
         ResetUIFormHelper();
+
         //关闭启动界面
         GameEntryMain.UI.DeerUIInitRootForm().OnCloseLaunchView();
         GameEntryMain.UI.DeerUIInitRootForm().OnOpenLoadingForm(false);
     }
     private static List<Assembly> m_HotfixAssemblys = new List<Assembly>();
     private static string m_EntranceProcedureTypeName = "HotfixBusiness.Procedure.ProcedurePreload";
-//     private static void ResetProcedure()
-//     {
-//         ResetProcedure(m_EntranceProcedureTypeName);
-//     }
-//     public static void ResetProcedure(string procedureName) 
-//     {
-// #if UNITY_EDITOR
-//         if (m_HotfixAssemblys.Count == 0)
-//         {
-//             Logger.Error("1.请检查GlobalSettings.asset 文件里的 HotfixAssemblies 集合字段，确保热更程序集已经收集完毕；");
-//             return;
-//         }
-// #endif
-//         //卸载流程
-//         Fsm.DestroyFsm<GameFramework.Procedure.IProcedureManager>();
-//         GameFramework.Procedure.IProcedureManager procedureManager = GameFramework.GameFrameworkEntry.GetModule<GameFramework.Procedure.IProcedureManager>();
-//         //创建新的流程 HotfixFramework.Runtime
-//         ProcedureBase[] procedures = GetProcedures();
-//         if (procedures == null)
-//         {
-//             Log.Error("Procedures is invalid.");
-//             return;
-//         }
-//         ProcedureBase _EntranceProcedureBase = GetProcedureByName(procedureName);
-//         if (_EntranceProcedureBase == null)
-//         {
-//             Log.Error("Entrance procedure is invalid.");
-//             return;
-//         }
-//         procedureManager.Initialize(GameFramework.GameFrameworkEntry.GetModule<GameFramework.Fsm.IFsmManager>(), procedures);
-//         procedureManager.StartProcedure(_EntranceProcedureBase.GetType());
-//     }
+    private static void ResetProcedure()
+    {
+        ResetProcedure(m_EntranceProcedureTypeName);
+    }
+    public static void ResetProcedure(string procedureName)
+    {
+#if UNITY_EDITOR
+        if (m_HotfixAssemblys.Count == 0)
+        {
+            Logger.Error("1.请检查GlobalSettings.asset 文件里的 HotfixAssemblies 集合字段，确保热更程序集已经收集完毕；");
+            return;
+        }
+#endif
+        //卸载流程
+        Fsm.DestroyFsm<GameFramework.Procedure.IProcedureManager>();
+        GameFramework.Procedure.IProcedureManager procedureManager = GameFramework.GameFrameworkEntry.GetModule<GameFramework.Procedure.IProcedureManager>();
+        //创建新的流程 HotfixFramework.Runtime
+        ProcedureBase[] procedures = GetProcedures();
+        if (procedures == null)
+        {
+            Log.Error("Procedures is invalid.");
+            return;
+        }
+        ProcedureBase _EntranceProcedureBase = GetProcedureByName(procedureName);
+        if (_EntranceProcedureBase == null)
+        {
+            Log.Error("Entrance procedure is invalid.");
+            return;
+        }
+        procedureManager.Initialize(GameFramework.GameFrameworkEntry.GetModule<GameFramework.Fsm.IFsmManager>(), procedures);
+        procedureManager.StartProcedure(_EntranceProcedureBase.GetType());
+    }
     private static string m_UIFormHelperTypeName = "Main.Runtime.DeerUIFormHelper";
     private static UIFormHelperBase m_CustomUIFormHelper = null;
-    private static void ResetUIFormHelper() 
+    private static void ResetUIFormHelper()
     {
         IUIManager uIManager = GameFrameworkEntry.GetModule<IUIManager>();
         if (uIManager == null)
@@ -262,7 +263,7 @@ public partial class GameEntry
             UI.AddUIGroup(item.Key.ToString(), item.Value, false);
         }
     }
-    public static void Entrance(object[] objects) 
+    public static void Entrance(object[] objects)
     {
         m_HotfixAssemblys = (List<Assembly>)objects[0];
         //初始化自定义调试器
